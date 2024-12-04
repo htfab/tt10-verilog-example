@@ -15,3 +15,6 @@ jobs:
 
       - name: Build docs
         uses: TinyTapeout/tt-gds-action/docs@tt10
+        with:
+          tools-repo: htfab/tt-support-tools
+          tools-ref: tt10

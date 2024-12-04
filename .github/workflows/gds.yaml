@@ -17,6 +17,8 @@ jobs:
         uses: TinyTapeout/tt-gds-action@tt10
         with:
           flow: openlane2
+          tools-repo: htfab/tt-support-tools
+          tools-ref: tt10
 
   precheck:
     needs: gds
@@ -24,6 +26,9 @@ jobs:
     steps:
       - name: Run Tiny Tapeout Precheck
         uses: TinyTapeout/tt-gds-action/precheck@tt10
+        with:
+          tools-repo: htfab/tt-support-tools
+          tools-ref: tt10
 
   gl_test:
     needs: gds
