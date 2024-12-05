@@ -17,4 +17,4 @@ jobs:
         uses: TinyTapeout/tt-gds-action/docs@tt10
         with:
           tools-repo: htfab/tt-support-tools
-          tools-ref: tt10
+          tools-ref: tt10-i78
