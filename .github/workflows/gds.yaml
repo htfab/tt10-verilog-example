@@ -20,7 +20,7 @@ jobs:
           cmd: echo TOP_MODULE=`yq '.project.top_module' info.yaml` > $GITHUB_OUTPUT
 
       - name: Create and publish the GDS artifact
-        uses: TinyTapeout/tt-gds-action/custom_gds@tt10
+        uses: htfab/tt-gds-action/custom_gds@tt10
         with:
           tools-repo: htfab/tt-support-tools
           tools-ref: tt10
@@ -34,7 +34,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Run Tiny Tapeout Precheck
-        uses: TinyTapeout/tt-gds-action/precheck@tt10
+        uses: htfab/tt-gds-action/precheck@tt10
         with:
           tools-repo: htfab/tt-support-tools
           tools-ref: tt10
@@ -46,4 +46,4 @@ jobs:
       pages: write      # to deploy to Pages
       id-token: write   # to verify the deployment originates from an appropriate source
     steps:
-      - uses: TinyTapeout/tt-gds-action/viewer@tt10
+      - uses: htfab/tt-gds-action/viewer@tt10
