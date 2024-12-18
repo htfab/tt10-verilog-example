@@ -14,7 +14,7 @@ jobs:
           submodules: recursive
 
       - name: Build GDS
-        uses: htfab/tt-gds-action@tt10-drop-ol1
+        uses: htfab/tt-gds-action@tt10-oas
         with:
           flow: openlane2
           tools-repo: htfab/tt-support-tools
@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-24.04
     steps:
       - name: Run Tiny Tapeout Precheck
-        uses: htfab/tt-gds-action/precheck@tt10-drop-ol1
+        uses: htfab/tt-gds-action/precheck@tt10-oas
         with:
           tools-repo: htfab/tt-support-tools
           tools-ref: tt10-drop-ol1
@@ -40,7 +40,7 @@ jobs:
           submodules: recursive
 
       - name: GL test
-        uses: htfab/tt-gds-action/gl_test@tt10-drop-ol1
+        uses: htfab/tt-gds-action/gl_test@tt10-oas
 
   viewer:
     needs: gds
@@ -49,4 +49,4 @@ jobs:
       pages: write      # to deploy to Pages
       id-token: write   # to verify the deployment originates from an appropriate source
     steps:
-      - uses: htfab/tt-gds-action/viewer@tt10-drop-ol1
+      - uses: htfab/tt-gds-action/viewer@tt10-oas
